@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.squeeze {
+	@apply transform active:scale-90 transition-transform;
+}
