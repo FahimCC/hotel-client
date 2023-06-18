@@ -31,7 +31,7 @@ const Register = () => {
 				updateUserProfile(data.name, data.image)
 					.then(() => {
 						axios
-							.post('http://localhost:4000/users', {
+							.post('https://hotel-server-fahimcc.vercel.app/users', {
 								name: data.name,
 								email: data.email,
 								image: data.image,

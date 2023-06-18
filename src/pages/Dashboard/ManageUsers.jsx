@@ -17,7 +17,7 @@ const ManagerUsers = () => {
 	});
 	const handleAdmin = user => {
 		axiosSecure
-			.patch(`http://localhost:4000/users/admin/${user._id}`)
+			.patch(`https://hotel-server-fahimcc.vercel.app/users/admin/${user._id}`)
 			.then(data => {
 				if (data.data.modifiedCount > 0) {
 					refetch();

@@ -13,7 +13,7 @@ const OwnBookings = () => {
 		queryKey: ['email', email],
 		queryFn: async () => {
 			const res = await axios.get(
-				`http://localhost:4000/own-bookings-get/${email}`
+				`https://hotel-server-fahimcc.vercel.app/own-bookings-get/${email}`
 			);
 			console.log(res.data);
 			return res.data;
@@ -23,19 +23,21 @@ const OwnBookings = () => {
 	console.log(bookings);
 
 	const handleCancel = id => {
-		axios.patch(`http://localhost:4000/own-bookings-patch/${id}`).then(res => {
-			console.log(res.data);
-			if (res.data.modifiedCount > 0) {
-				refetch();
-				Swal.fire({
-					position: 'top-end',
-					icon: 'success',
-					title: 'Your booking has been canceled',
-					showConfirmButton: false,
-					timer: 1500,
-				});
-			}
-		});
+		axios
+			.patch(`https://hotel-server-fahimcc.vercel.app/own-bookings-patch/${id}`)
+			.then(res => {
+				console.log(res.data);
+				if (res.data.modifiedCount > 0) {
+					refetch();
+					Swal.fire({
+						position: 'top-end',
+						icon: 'success',
+						title: 'Your booking has been canceled',
+						showConfirmButton: false,
+						timer: 1500,
+					});
+				}
+			});
 	};
 
 	return (

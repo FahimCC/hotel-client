@@ -19,7 +19,9 @@ const HotelBook = () => {
 	const { data: hotel = {} } = useQuery({
 		queryKey: ['hotelBook', id],
 		queryFn: async () => {
-			const res = await axios.get(`http://localhost:4000/hotel-book/${id}`);
+			const res = await axios.get(
+				`https://hotel-server-fahimcc.vercel.app/hotel-book/${id}`
+			);
 			return res.data;
 		},
 	});

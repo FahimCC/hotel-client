@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useUser from '../hooks/UseUser';
 
 const axiosSecure = axios.create({
-	baseURL: 'http://localhost:4000',
+	baseURL: 'https://hotel-server-fahimcc.vercel.app',
 });
 
 const useAxiosSecure = () => {

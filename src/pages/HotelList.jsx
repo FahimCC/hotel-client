@@ -27,7 +27,7 @@ const HotelList = () => {
 		queryKey: ['district', district],
 		queryFn: async () => {
 			const res = await axios.get(
-				`http://localhost:4000/hotel-list/${district}`
+				`https://hotel-server-fahimcc.vercel.app/hotel-list/${district}`
 			);
 			return res.data;
 		},

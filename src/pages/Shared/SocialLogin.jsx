@@ -14,7 +14,7 @@ const SocialLogin = ({ from }) => {
 				const loggedUser = result.user;
 				console.log('SocialLogin: ', loggedUser.displayName, loggedUser.email);
 				axios
-					.post('http://localhost:4000/users', {
+					.post('https://hotel-server-fahimcc.vercel.app/users', {
 						name: loggedUser.displayName,
 						email: loggedUser.email,
 						image: loggedUser.photoURL,

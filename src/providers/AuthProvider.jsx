@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
 
 			if (currentUser && currentUser?.email) {
 				axios
-					.post('http://localhost:4000/jwt', {
+					.post('https://hotel-server-fahimcc.vercel.app/jwt', {
 						email: currentUser?.email,
 					})
 					.then(data => {
