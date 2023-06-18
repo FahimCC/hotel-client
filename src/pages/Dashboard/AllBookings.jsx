@@ -1,17 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import Swal from 'sweetalert2';
-import useAxiosSecure from '../../hooks/useAxiosSecure';
 import useTitle from '../../hooks/useTitle';
 
 const AllBookings = () => {
 	useTitle('All Bookings');
 
-	const [axiosSecure] = useAxiosSecure();
-
 	const { data: bookings = [], refetch } = useQuery({
 		queryKey: ['bookings'],
 		queryFn: async () => {
-			const res = await axiosSecure.get(`/all-booking`);
+			const res = await axios.get(`http://localhost:4000/all-bookings`);
 			return res.data;
 		},
 	});
@@ -19,7 +17,7 @@ const AllBookings = () => {
 	console.log(bookings);
 
 	const handleCancel = id => {
-		axiosSecure.patch(`/my-booking/${id}`).then(res => {
+		axios.patch(`http://localhost:4000/own-bookings-patch/${id}`).then(res => {
 			console.log(res.data);
 			if (res.data.modifiedCount > 0) {
 				refetch();
@@ -39,7 +37,7 @@ const AllBookings = () => {
 			<h1 className='text-5xl text-center font-bubblegum clip my-10'>
 				All bookings
 			</h1>
-			<div className='min-h-fit  h-[500px] overflow-y-auto overflow-x-auto rounded-lg'>
+			<div className='overflow-x-auto rounded-lg'>
 				<table className='table '>
 					{/* head */}
 					<thead>
@@ -51,6 +49,7 @@ const AllBookings = () => {
 							<th>Price</th>
 							<th>Check In</th>
 							<th>Check Out</th>
+							<th>status</th>
 							<th className='text-center'>Action</th>
 						</tr>
 					</thead>
@@ -73,8 +72,11 @@ const AllBookings = () => {
 								<td>{booking.price}</td>
 								<td>{booking.checkIn}</td>
 								<td>{booking.checkOut}</td>
-								<td className='flex flex-wrap h-20 items-center justify-center gap-1 '>
-									{booking.status === 'booking' ? (
+								<td className='btn btn-sm btn-oulitne my-6'>
+									{booking.status}
+								</td>
+								<td className=''>
+									{booking.status === 'Booked' ? (
 										<button
 											onClick={() => handleCancel(booking._id)}
 											className='btn btn-xs btn-error squeeze'

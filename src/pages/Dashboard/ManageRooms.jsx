@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import useTitle from '../../hooks/useTitle';
+import { Link } from 'react-router-dom';
 
-const AllRooms = () => {
+const ManagerRooms = () => {
 	useTitle('All Rooms');
 
 	const [axiosSecure] = useAxiosSecure();
@@ -12,13 +12,13 @@ const AllRooms = () => {
 	const { data: rooms = [], refetch } = useQuery({
 		queryKey: ['rooms'],
 		queryFn: async () => {
-			const res = await axiosSecure.get(`/all-rooms`);
+			const res = await axiosSecure.get(`/manage-rooms`);
 			return res.data;
 		},
 	});
 
 	const handleDelete = id => {
-		axiosSecure.delete(`/all-rooms/${id}`).then(res => {
+		axiosSecure.delete(`/manage-rooms/${id}`).then(res => {
 			if (res.data.deletedCount > 0) {
 				refetch();
 				Swal.fire({
@@ -35,7 +35,7 @@ const AllRooms = () => {
 	return (
 		<div className='container'>
 			<h1 className='text-5xl text-center font-bubblegum clip my-10'>
-				All Room
+				Manage Rooms
 			</h1>
 			<div className='overflow-x-auto rounded-lg'>
 				<table className='table '>
@@ -55,7 +55,7 @@ const AllRooms = () => {
 					</thead>
 					<tbody>
 						{rooms?.map((room, index) => (
-							<tr key={room._id}>
+							<tr key={room._id} className='max-h-20'>
 								<td>{index + 1}</td>
 								<td>{room.districtName}</td>
 								<td>{room.hotelName}</td>
@@ -64,7 +64,7 @@ const AllRooms = () => {
 								<td>{room.twoBedPrice}</td>
 								<td>{room.deluxePrice}</td>
 								<td>{room.penthousePrice}</td>
-								<td className='h-36  flex flex-col items-center justify-center gap-2'>
+								<td className='flex justify-center items-center h-48 gap-2'>
 									<Link to={`/update-room/${room._id}`}>
 										<button className='btn btn-xs btn-secondary squeeze'>
 											Update
@@ -86,4 +86,4 @@ const AllRooms = () => {
 	);
 };
 
-export default AllRooms;
+export default ManagerRooms;

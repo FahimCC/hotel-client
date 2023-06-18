@@ -29,7 +29,11 @@ const Navbar = () => {
 				<li tabIndex={0}>
 					<details>
 						<summary className=' hover:text-Second focus:text-Second'>
-							Dashboard
+							{isAdmin
+								? 'Admin Dashboard'
+								: isOwner
+								? 'Owner Dashboard'
+								: 'Client Dashboard'}
 						</summary>
 						<ul className='p-2 z-10'>
 							{isOwner ? (
@@ -89,10 +93,10 @@ const Navbar = () => {
 							) : (
 								<li>
 									<Link
-										to={`/my-bookings/${user?.email}`}
+										to={`/own-bookings-get/${user?.email}`}
 										className=' text-black hover:text-Second focus:text-Second hover:bg-transparent'
 									>
-										My Bookings
+										Own Bookings
 									</Link>
 								</li>
 							)}

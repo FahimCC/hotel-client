@@ -5,10 +5,12 @@ import { TbCurrencyTaka } from 'react-icons/tb';
 import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useUser from '../hooks/UseUser';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 import useTitle from '../hooks/useTitle';
 
 const HotelBook = () => {
 	useTitle('Booking');
+	const [axiosSecure] = useAxiosSecure();
 	const { id, checkIn, checkOut } = useParams();
 	const { user } = useUser();
 	const [selectedOption, setSelectedOption] = useState('twoBed');
@@ -17,7 +19,7 @@ const HotelBook = () => {
 	const { data: hotel = {} } = useQuery({
 		queryKey: ['hotelBook', id],
 		queryFn: async () => {
-			const res = await axios.get(`/hotel-book/${id}`);
+			const res = await axios.get(`http://localhost:4000/hotel-book/${id}`);
 			return res.data;
 		},
 	});
@@ -26,7 +28,7 @@ const HotelBook = () => {
 		setSelectedOption(event.target.value);
 	};
 
-	console.log(checkIn, checkOut);
+	// console.log(checkIn, checkOut);
 
 	const handleReserve = event => {
 		event.preventDefault();
@@ -37,8 +39,8 @@ const HotelBook = () => {
 				? 'Deluxe Room'
 				: 'Penthouse Apartment';
 
-		axios
-			.post(`http://localhost:5000/booking-collection`, {
+		axiosSecure
+			.post(`/booking-collection`, {
 				email: user?.email,
 				room: roomType,
 				image: hotel.hotelImage,

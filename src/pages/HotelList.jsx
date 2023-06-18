@@ -4,12 +4,10 @@ import axios from 'axios';
 import { useState } from 'react';
 import { BiHotel } from 'react-icons/bi';
 import { Link, useParams } from 'react-router-dom';
-import useAxiosSecure from '../hooks/useAxiosSecure';
 import useTitle from '../hooks/useTitle';
 
 const HotelList = () => {
 	useTitle('Hotel List');
-	const [axiosSecure] = useAxiosSecure();
 	const { place, checkIn, checkOut } = useParams();
 	const [district, setDistrict] = useState(place);
 
@@ -26,9 +24,11 @@ const HotelList = () => {
 	};
 
 	const { data: hotelList = [] } = useQuery({
-		queryKey: ['hotelList', district],
+		queryKey: ['district', district],
 		queryFn: async () => {
-			const res = await axios.get(`/hotel-list/${district}`);
+			const res = await axios.get(
+				`http://localhost:4000/hotel-list/${district}`
+			);
 			return res.data;
 		},
 	});
@@ -62,7 +62,7 @@ const HotelList = () => {
 								<option value='Sylhet'>Sylhet</option>
 								<option value='Mymensingh'>Mymensingh</option>
 								<option value='Rangpur'>Rangpur</option>
-								<option value='Basrishal'>Basrishal</option>
+								<option value='Barishal'>Barishal</option>
 							</select>
 							<BiHotel className='text-xl' />
 						</div>

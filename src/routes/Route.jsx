@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import ErrorPage from '../Components/ErrorPage';
 import Home from '../Pages/Home';
-import HotelList from '../Pages/HotelList';
+
 import Main from '../layouts/Main';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
@@ -9,10 +9,12 @@ import AddRoom from '../pages/Dashboard/AddRoom';
 import AllBookings from '../pages/Dashboard/AllBookings';
 import AllRooms from '../pages/Dashboard/AllRooms';
 import ManageBookings from '../pages/Dashboard/ManageBookings';
-import ManageRooms from '../pages/Dashboard/ManagerRooms';
-import ManageUsers from '../pages/Dashboard/ManagerUsers';
-import MyBookings from '../pages/Dashboard/MyBookings';
+import ManageRooms from '../pages/Dashboard/ManageRooms';
+import ManageUsers from '../pages/Dashboard/ManageUsers';
+import OwnBookings from '../pages/Dashboard/OwnBookings';
+import UpdateRoom from '../pages/Dashboard/UpdateRoom';
 import HotelBook from '../pages/HotelBook';
+import HotelList from '../pages/HotelList';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import AdminRoute from '../routes/AdminRoute';
@@ -50,12 +52,8 @@ const router = createBrowserRouter([
 				),
 			},
 			{
-				path: '/my-bookings/:email',
-				element: (
-					<PrivateRoute>
-						<MyBookings />
-					</PrivateRoute>
-				),
+				path: '/own-bookings-get/:email',
+				element: <OwnBookings />,
 			},
 			{
 				path: '/all-bookings',
@@ -74,7 +72,15 @@ const router = createBrowserRouter([
 				),
 			},
 			{
-				path: '/all-room',
+				path: '/update-room/:id',
+				element: (
+					<PrivateRoute>
+						<UpdateRoom />
+					</PrivateRoute>
+				),
+			},
+			{
+				path: '/all-rooms',
 				element: (
 					<OwnerRoute>
 						<AllRooms />

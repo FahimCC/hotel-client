@@ -1,11 +1,26 @@
+import { useQuery } from '@tanstack/react-query';
 import { useForm } from 'react-hook-form';
+import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import useTitle from '../../hooks/useTitle';
 
-const AddRoom = () => {
-	useTitle('Add Room');
+const UpdateRoom = () => {
+	useTitle('Update Room');
 	const [axiosSecure] = useAxiosSecure();
+
+	const { id } = useParams();
+	const navigate = useNavigate();
+
+	const { data: room = {} } = useQuery({
+		queryKey: ['room', id],
+		queryFn: async () => {
+			const res = await axiosSecure.get(`/update-room-get/${id}`);
+			return res.data;
+		},
+	});
+
+	console.log(room);
 
 	const {
 		register,
@@ -17,14 +32,42 @@ const AddRoom = () => {
 	const onSubmit = data => {
 		// console.log(data);
 
-		axiosSecure.post('/add-room', data).then(data => {
+		if (!data.image) {
+			data.hotelImage = room?.hotelImage;
+		}
+		if (!data.twoBedAvailable) {
+			data.twoBedAvailable = room?.twoBedAvailable;
+		}
+		if (!data.deluxeAvailable) {
+			data.deluxeAvailable = room?.deluxeAvailable;
+		}
+		if (!data.penthouseAvailable) {
+			data.penthouseAvailable = room?.penthouseAvailable;
+		}
+		if (!data.ratings) {
+			data.ratings = room?.ratings;
+		}
+		if (!data.twoBedPrice) {
+			data.twoBedPrice = room?.twoBedPrice;
+		}
+		if (!data.deluxePrice) {
+			data.deluxePrice = room?.deluxePrice;
+		}
+		if (!data.penthousePrice) {
+			data.penthousePrice = room?.penthousePrice;
+		}
+		if (!data.description) {
+			data.description = room?.description;
+		}
+
+		axiosSecure.patch(`/update-room-patch/${id}`, data).then(data => {
 			console.log(data.data);
-			if (data.data.insertedId) {
+			if (data.data.modifiedCount > 0) {
 				reset();
 				Swal.fire({
 					position: 'top-end',
 					icon: 'success',
-					title: 'Your room has been stored',
+					title: 'Your room has been updated',
 					showConfirmButton: false,
 					timer: 1500,
 				});
@@ -32,10 +75,11 @@ const AddRoom = () => {
 		});
 	};
 	console.log(errors);
+
 	return (
 		<div className='container bg-white my-6'>
 			<h1 className='text-5xl text-center font-bubblegum clip my-10'>
-				Add Room
+				Update Room
 			</h1>
 			<div className='bg-[#F3F3F3] rounded-lg lg:mx-20'>
 				<form
@@ -45,36 +89,13 @@ const AddRoom = () => {
 					<div className='flex gap-10'>
 						<div className='form-control w-full '>
 							<label className='label'>
-								<span className='label-text'>District Name*</span>
-							</label>
-							<input
-								type='text'
-								placeholder='District Name*'
-								{...register('districtName', { required: true })}
-								className='input input-bordered w-full '
-							/>
-						</div>
-						<div className='form-control w-full '>
-							<label className='label'>
-								<span className='label-text'>Hotel Name*</span>
-							</label>
-							<input
-								type='text'
-								placeholder='Hotel Name*'
-								{...register('hotelName', { required: true })}
-								className='input input-bordered w-full '
-							/>
-						</div>
-					</div>
-					<div className='flex gap-10'>
-						<div className='form-control w-full '>
-							<label className='label'>
 								<span className='label-text'>Hotel Image*</span>
 							</label>
 							<input
 								type='text'
 								placeholder='Hotel Image*'
-								{...register('image', { required: true })}
+								defaultValue={room?.hotelImage}
+								{...register('hotelImage', { required: true })}
 								className='input input-bordered w-full '
 							/>
 						</div>
@@ -85,7 +106,8 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Two Bed Quantity*'
-								{...register('twoBedQuantity', { required: true })}
+								defaultValue={room.twoBedAvailable}
+								{...register('twoBedAvailable', { required: true })}
 								className='input input-bordered w-full '
 							/>
 						</div>
@@ -98,7 +120,8 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Deluxe Quantity*'
-								{...register('deluxeQuantity', { required: true })}
+								defaultValue={room.deluxeAvailable}
+								{...register('deluxeAvailable', { required: true })}
 								className='input input-bordered w-full '
 							/>
 						</div>
@@ -109,7 +132,8 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Penthouse Quantity*'
-								{...register('penthouseQuantity', { required: true })}
+								defaultValue={room.penthouseAvailable}
+								{...register('penthouseAvailable', { required: true })}
 								className='input input-bordered w-full '
 							/>
 						</div>
@@ -122,6 +146,7 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Ratings*'
+								defaultValue={room.ratings}
 								{...register('ratings', { required: true })}
 								className='input input-bordered w-full '
 							/>
@@ -133,6 +158,7 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Two Bed Price*'
+								defaultValue={room.twoBedPrice}
 								{...register('twoBedPrice', { required: true })}
 								className='input input-bordered w-full '
 							/>
@@ -146,6 +172,7 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Deluxe Price*'
+								defaultValue={room.deluxePrice}
 								{...register('deluxePrice', { required: true })}
 								className='input input-bordered w-full '
 							/>
@@ -157,6 +184,7 @@ const AddRoom = () => {
 							<input
 								type='text'
 								placeholder='Penthouse Price'
+								defaultValue={room.penthousePrice}
 								{...register('penthousePrice', { required: true })}
 								className='input input-bordered w-full '
 							/>
@@ -168,13 +196,14 @@ const AddRoom = () => {
 						</label>
 						<textarea
 							{...register('description', { required: true })}
+							defaultValue={room.description}
 							className='textarea textarea-bordered h-24'
 							placeholder='Description'
 						></textarea>
 					</div>
 					<div className='text-center'>
 						<button type='submit' className='btn bg-[#B58130]'>
-							Add Room
+							Update Room
 						</button>
 					</div>
 				</form>
@@ -183,4 +212,4 @@ const AddRoom = () => {
 	);
 };
 
-export default AddRoom;
+export default UpdateRoom;
