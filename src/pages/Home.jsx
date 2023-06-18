@@ -1,9 +1,25 @@
 import { BiHotel } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useTitle from '../hooks/useTitle';
 
 const Home = () => {
 	useTitle('Home');
+
+	const navigate = useNavigate();
+
+	const handleSearch = event => {
+		event.preventDefault();
+
+		const form = event.target;
+		const place = form.place.value;
+		const checkIn = form.checkIn.value;
+		const checkOut = form.checkOut.value;
+
+		console.log(place, checkIn, checkOut);
+
+		navigate(`/hotel-list/${place}/${checkIn}/${checkOut}`);
+	};
+
 	return (
 		<>
 			<div className='bg-First'>
@@ -15,37 +31,48 @@ const Home = () => {
 			</div>
 			<div className='container'>
 				<div className='flex justify-center'>
-					<form className='flex flex-col md:flex-row justify-center items-center  gap-3 md:gap-10 border-2 px-4 py-1 w-fit bg-white rounded-lg border-Second -mt-6'>
+					<form
+						onSubmit={handleSearch}
+						className='flex flex-col md:flex-row justify-center items-center  gap-3 md:gap-10 border-2 px-4 py-1 w-fit bg-white rounded-lg border-Second -mt-6'
+					>
 						<div className='flex items-center text-base-400'>
-							<select className='select w-full max-w-xs'>
-								<option disabled selected>
+							<select name='place' defaultValue='Where are you going?' className='select w-full max-w-xs' required>
+								<option disabled >
 									Where are you going?
 								</option>
-								<option>Dhaka</option>
-								<option>Chittagong</option>
-								<option>Rajshahi</option>
-								<option>Khulna</option>
-								<option>Sylhet</option>
-								<option>Mymensingh</option>
-								<option>Rangpur</option>
-								<option>Basrishal</option>
+								<option value='Dhaka'>Dhaka</option>
+								<option value='Chittagong'>Chittagong</option>
+								<option value='Rajshahi'>Rajshahi</option>
+								<option value='Khulna'>Khulna</option>
+								<option value='Sylhet'>Sylhet</option>
+								<option value='Mymensingh'>Mymensingh</option>
+								<option value='Rangpur'>Rangpur</option>
+								<option value='Basrishal'>Basrishal</option>
 							</select>
 							<BiHotel className='text-xl' />
 						</div>
 						<div>
-							<input type='date' placeholder='Check in' />
+							<input
+								type='date'
+								name='checkIn'
+								placeholder='Check in'
+								required
+							/>
 						</div>
 						<div>
-							<input type='date' placeholder='Check out' />
+							<input
+								type='date'
+								name='checkOut'
+								placeholder='Check out'
+								required
+							/>
 						</div>
-						<Link to={`/hotel-list`}>
-							<button
-								type='submit'
-								className='px-2 py-1 bg-First rounded-lg text-white squeeze'
-							>
-								Search
-							</button>
-						</Link>
+						<button
+							type='submit'
+							className='px-2 py-1 bg-First rounded-lg text-white squeeze'
+						>
+							Search
+						</button>
 					</form>
 				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20'>

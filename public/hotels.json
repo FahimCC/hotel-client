@@ -3,704 +3,448 @@
 		"districtName": "Dhaka",
 		"address": "123 ABC Road, Dhaka",
 		"hotelName": "Hotel A",
-		"hotelImage": "hotel_a.jpg",
-		"description": "A luxurious hotel in Dhaka",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.5,
-		"rooms": {
-			"deluxe": {
-				"quantity": 10,
-				"price": 150
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 200
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 400
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Dhaka",
 		"address": "456 XYZ Road, Dhaka",
 		"hotelName": "Hotel B",
-		"hotelImage": "hotel_b.jpg",
-		"description": "A comfortable hotel in Dhaka",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.2,
-		"rooms": {
-			"deluxe": {
-				"quantity": 8,
-				"price": 120
-			},
-			"twoBed": {
-				"quantity": 7,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 350
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Dhaka",
 		"address": "789 PQR Road, Dhaka",
 		"hotelName": "Hotel C",
-		"hotelImage": "hotel_c.jpg",
-		"description": "A modern hotel in Dhaka",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.8,
-		"rooms": {
-			"deluxe": {
-				"quantity": 12,
-				"price": 180
-			},
-			"twoBed": {
-				"quantity": 6,
-				"price": 220
-			},
-			"penthouse": {
-				"quantity": 4,
-				"price": 450
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Dhaka",
 		"address": "321 DEF Road, Dhaka",
 		"hotelName": "Hotel D",
-		"hotelImage": "hotel_d.jpg",
-		"description": "A stylish hotel in Dhaka",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.6,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 140
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 500
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Chittagong",
 		"address": "123 ABC Road, Chittagong",
 		"hotelName": "Hotel E",
-		"hotelImage": "hotel_e.jpg",
-		"description": "A luxurious hotel in Chittagong",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.4,
-		"rooms": {
-			"deluxe": {
-				"quantity": 7,
-				"price": 130
-			},
-			"twoBed": {
-				"quantity": 3,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Chittagong",
 		"address": "456 XYZ Road, Chittagong",
 		"hotelName": "Hotel F",
-		"hotelImage": "hotel_f.jpg",
-		"description": "A comfortable hotel in Chittagong",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.1,
-		"rooms": {
-			"deluxe": {
-				"quantity": 6,
-				"price": 110
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 160
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 330
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Chittagong",
 		"address": "789 PQR Road, Chittagong",
 		"hotelName": "Hotel G",
-		"hotelImage": "hotel_g.jpg",
-		"description": "A modern hotel in Chittagong",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.7,
-		"rooms": {
-			"deluxe": {
-				"quantity": 11,
-				"price": 170
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 210
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 420
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Chittagong",
 		"address": "321 DEF Road, Chittagong",
 		"hotelName": "Hotel H",
-		"hotelImage": "hotel_h.jpg",
-		"description": "A stylish hotel in Chittagong",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.3,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 150
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 400
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Sylhet",
 		"address": "123 ABC Road, Sylhet",
 		"hotelName": "Hotel I",
-		"hotelImage": "hotel_i.jpg",
-		"description": "A luxurious hotel in Sylhet",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.6,
-		"rooms": {
-			"deluxe": {
-				"quantity": 8,
-				"price": 140
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Sylhet",
 		"address": "456 XYZ Road, Sylhet",
 		"hotelName": "Hotel J",
-		"hotelImage": "hotel_j.jpg",
-		"description": "A comfortable hotel in Sylhet",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.2,
-		"rooms": {
-			"deluxe": {
-				"quantity": 7,
-				"price": 120
-			},
-			"twoBed": {
-				"quantity": 6,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 350
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Sylhet",
 		"address": "789 PQR Road, Sylhet",
 		"hotelName": "Hotel K",
-		"hotelImage": "hotel_k.jpg",
-		"description": "A modern hotel in Sylhet",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.7,
-		"rooms": {
-			"deluxe": {
-				"quantity": 10,
-				"price": 160
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 210
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 420
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Sylhet",
 		"address": "321 DEF Road, Sylhet",
 		"hotelName": "Hotel L",
-		"hotelImage": "hotel_l.jpg",
-		"description": "A stylish hotel in Sylhet",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.5,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 130
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rajshahi",
 		"address": "123 ABC Road, Rajshahi",
 		"hotelName": "Hotel M",
-		"hotelImage": "hotel_m.jpg",
-		"description": "A luxurious hotel in Rajshahi",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.4,
-		"rooms": {
-			"deluxe": {
-				"quantity": 7,
-				"price": 130
-			},
-			"twoBed": {
-				"quantity": 3,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rajshahi",
 		"address": "456 XYZ Road, Rajshahi",
 		"hotelName": "Hotel N",
-		"hotelImage": "hotel_n.jpg",
-		"description": "A comfortable hotel in Rajshahi",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.1,
-		"rooms": {
-			"deluxe": {
-				"quantity": 6,
-				"price": 110
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 160
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 330
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rajshahi",
 		"address": "789 PQR Road, Rajshahi",
 		"hotelName": "Hotel O",
-		"hotelImage": "hotel_o.jpg",
-		"description": "A modern hotel in Rajshahi",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.3,
-		"rooms": {
-			"deluxe": {
-				"quantity": 8,
-				"price": 150
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 200
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 400
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rajshahi",
 		"address": "321 DEF Road, Rajshahi",
 		"hotelName": "Hotel P",
-		"hotelImage": "hotel_p.jpg",
-		"description": "A stylish hotel in Rajshahi",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.6,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 140
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 500
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Barishal",
 		"address": "123 ABC Road, Barishal",
 		"hotelName": "Hotel A",
-		"hotelImage": "hotel_a.jpg",
-		"description": "A luxurious hotel in Barishal",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.5,
-		"rooms": {
-			"deluxe": {
-				"quantity": 10,
-				"price": 150
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 200
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 400
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Barishal",
 		"address": "456 XYZ Road, Barishal",
 		"hotelName": "Hotel B",
-		"hotelImage": "hotel_b.jpg",
-		"description": "A comfortable hotel in Barishal",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.2,
-		"rooms": {
-			"deluxe": {
-				"quantity": 8,
-				"price": 120
-			},
-			"twoBed": {
-				"quantity": 7,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 350
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Barishal",
 		"address": "789 PQR Road, Barishal",
 		"hotelName": "Hotel C",
-		"hotelImage": "hotel_c.jpg",
-		"description": "A modern hotel in Barishal",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.8,
-		"rooms": {
-			"deluxe": {
-				"quantity": 12,
-				"price": 180
-			},
-			"twoBed": {
-				"quantity": 6,
-				"price": 220
-			},
-			"penthouse": {
-				"quantity": 4,
-				"price": 450
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Barishal",
 		"address": "321 DEF Road, Barishal",
 		"hotelName": "Hotel D",
-		"hotelImage": "hotel_d.jpg",
-		"description": "A stylish hotel in Barishal",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.6,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 140
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 500
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rangpur",
 		"address": "123 ABC Road, Rangpur",
 		"hotelName": "Hotel E",
-		"hotelImage": "hotel_e.jpg",
-		"description": "A luxurious hotel in Rangpur",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.4,
-		"rooms": {
-			"deluxe": {
-				"quantity": 7,
-				"price": 130
-			},
-			"twoBed": {
-				"quantity": 3,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rangpur",
 		"address": "456 XYZ Road, Rangpur",
 		"hotelName": "Hotel F",
-		"hotelImage": "hotel_f.jpg",
-		"description": "A comfortable hotel in Rangpur",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.1,
-		"rooms": {
-			"deluxe": {
-				"quantity": 6,
-				"price": 110
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 160
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 330
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rangpur",
 		"address": "789 PQR Road, Rangpur",
 		"hotelName": "Hotel G",
-		"hotelImage": "hotel_g.jpg",
-		"description": "A modern hotel in Rangpur",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.7,
-		"rooms": {
-			"deluxe": {
-				"quantity": 11,
-				"price": 170
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 210
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 420
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Rangpur",
 		"address": "321 DEF Road, Rangpur",
 		"hotelName": "Hotel H",
-		"hotelImage": "hotel_h.jpg",
-		"description": "A stylish hotel in Rangpur",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.3,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 150
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 400
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Khulna",
 		"address": "123 ABC Road, Khulna",
 		"hotelName": "Hotel I",
-		"hotelImage": "hotel_i.jpg",
-		"description": "A luxurious hotel in Khulna",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.6,
-		"rooms": {
-			"deluxe": {
-				"quantity": 8,
-				"price": 140
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Khulna",
 		"address": "456 XYZ Road, Khulna",
 		"hotelName": "Hotel J",
-		"hotelImage": "hotel_j.jpg",
-		"description": "A comfortable hotel in Khulna",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.2,
-		"rooms": {
-			"deluxe": {
-				"quantity": 7,
-				"price": 120
-			},
-			"twoBed": {
-				"quantity": 6,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 350
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Khulna",
 		"address": "789 PQR Road, Khulna",
 		"hotelName": "Hotel K",
-		"hotelImage": "hotel_k.jpg",
-		"description": "A modern hotel in Khulna",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.7,
-		"rooms": {
-			"deluxe": {
-				"quantity": 10,
-				"price": 170
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 210
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 420
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Khulna",
 		"address": "321 DEF Road, Khulna",
 		"hotelName": "Hotel L",
-		"hotelImage": "hotel_l.jpg",
-		"description": "A stylish hotel in Khulna",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.5,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 130
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Mymensingh",
 		"address": "123 ABC Road, Mymensingh",
 		"hotelName": "Hotel M",
-		"hotelImage": "hotel_m.jpg",
-		"description": "A luxurious hotel in Mymensingh",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.4,
-		"rooms": {
-			"deluxe": {
-				"quantity": 7,
-				"price": 130
-			},
-			"twoBed": {
-				"quantity": 3,
-				"price": 180
-			},
-			"penthouse": {
-				"quantity": 2,
-				"price": 380
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Mymensingh",
 		"address": "456 XYZ Road, Mymensingh",
 		"hotelName": "Hotel N",
-		"hotelImage": "hotel_n.jpg",
-		"description": "A comfortable hotel in Mymensingh",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.1,
-		"rooms": {
-			"deluxe": {
-				"quantity": 6,
-				"price": 110
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 160
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 330
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Mymensingh",
 		"address": "789 PQR Road, Mymensingh",
 		"hotelName": "Hotel O",
-		"hotelImage": "hotel_o.jpg",
-		"description": "A modern hotel in Mymensingh",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.3,
-		"rooms": {
-			"deluxe": {
-				"quantity": 8,
-				"price": 150
-			},
-			"twoBed": {
-				"quantity": 5,
-				"price": 200
-			},
-			"penthouse": {
-				"quantity": 3,
-				"price": 400
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	},
 	{
 		"districtName": "Mymensingh",
 		"address": "321 DEF Road, Mymensingh",
 		"hotelName": "Hotel P",
-		"hotelImage": "hotel_p.jpg",
-		"description": "A stylish hotel in Mymensingh",
+		"hotelImage": "https://www.theknot.com/tk-media/images/9a506749-95e9-47cf-857e-5374f2205b93~rs_768.h",
+		"description": "Introducing Serenity Suites, a haven of relaxation and sophistication. Immerse yourself in our contemporary and stylishly appointed rooms, offering unparalleled comfort. Indulge in culinary delights at our gourmet restaurant and unwind with a refreshing cocktail at our rooftop bar. Experience impeccable service and create unforgettable memories at Serenity Suites, your ultimate urban oasis.",
 		"ratings": 4.6,
-		"rooms": {
-			"deluxe": {
-				"quantity": 9,
-				"price": 140
-			},
-			"twoBed": {
-				"quantity": 4,
-				"price": 190
-			},
-			"penthouse": {
-				"quantity": 1,
-				"price": 500
-			}
-		}
+		"deluxePrice": 5000,
+		"deluxeAvailable": 4,
+		"twoBedPrice": 6000,
+		"twoBedAvailable": 3,
+		"penthousePrice": 8000,
+		"penthouseAvailable": 1
 	}
 ]

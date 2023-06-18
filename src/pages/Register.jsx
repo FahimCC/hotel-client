@@ -1,10 +1,15 @@
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import useUser from '../hooks/UseUser';
 import useTitle from '../hooks/useTitle';
-import SocialLogin from '../pages/Shared/SocialLogin';
+import SocialLogin from './Shared/SocialLogin';
 
 const Register = () => {
 	useTitle('Register');
+	const { createUser, logOut, updateUserProfile } = useUser();
+	const navigate = useNavigate();
 	const location = useLocation();
 	const from = location?.state?.from?.pathname || '/';
 
@@ -12,19 +17,69 @@ const Register = () => {
 		register,
 		handleSubmit,
 		watch,
+		reset,
 		formState: { errors },
 	} = useForm();
 	const onSubmit = data => {
 		console.log(data);
-		//TODO register
+
+		createUser(data.email, data.password)
+			.then(result => {
+				const loggedUser = result.user;
+				console.log('register: ', loggedUser, data.name, data.image);
+
+				updateUserProfile(data.name, data.image)
+					.then(() => {
+						axios
+							.post('http://localhost:5000/users', {
+								name: data.name,
+								email: data.email,
+								image: data.image,
+							})
+							.then(data => {
+								if (data.data.insertedId) {
+									reset();
+									Swal.fire({
+										position: 'top-end',
+										icon: 'success',
+										title: 'Registration Successful.Please Login...',
+										showConfirmButton: false,
+										timer: 2500,
+									});
+
+									logOut()
+										.then(() => {})
+										.catch(error => console.log(error));
+
+									navigate('/login', { replace: true });
+									// navigate(from, { replace: true });
+								}
+							});
+					})
+					.catch(error => console.log(error));
+			})
+			.catch(error => console.log(error));
+	};
+
+	const handleRegister = () => {
+		Swal.fire({
+			position: 'center',
+			icon: 'info',
+			title: 'Please Wait...',
+			showConfirmButton: false,
+			timer: 3000,
+		});
 	};
 
 	return (
 		<div className='hero my-2'>
-			<div className='hero-content flex-col lg:flex-row-reverse gap-20'>
-				<div className='card  w-full max-w-sm border-2 border-primary hover:border-secondary bg-base-100 py-4'>
+			<div className='hero-content '>
+				<div className='card w-full max-w-sm border-2 border-primary hover:border-secondary bg-base-100 py-4'>
 					<h1 className='text-3xl text-center font-medium'>Register</h1>
-					<form onSubmit={handleSubmit(onSubmit)} className='card-body -my-6'>
+					<form
+						onSubmit={handleSubmit(onSubmit)}
+						className='card-body -my-6 w-full'
+					>
 						<div className='form-control'>
 							<label className='label'>
 								<span className='label-text'>Name</span>
@@ -43,7 +98,7 @@ const Register = () => {
 						</div>
 						<div className='form-control'>
 							<label className='label'>
-								<span className='label-text'>Image URL</span>
+								<span className='label-text'>Image</span>
 							</label>
 							<input
 								type='text'
@@ -130,6 +185,7 @@ const Register = () => {
 						</div>
 						<div className='form-control mt-6'>
 							<button
+								onClick={handleRegister}
 								type='submit'
 								className='btn bg-First hover:bg-second text-white hover:bg-Second'
 							>

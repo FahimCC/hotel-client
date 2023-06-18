@@ -7,3 +7,6 @@
 .squeeze {
 	@apply transform active:scale-90 transition-transform;
 }
+.clip {
+	@apply bg-clip-text text-transparent bg-gradient-to-r from-First via-[#1db9ac] to-Second;
+}

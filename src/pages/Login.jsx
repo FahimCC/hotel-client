@@ -1,13 +1,18 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import useUser from '../hooks/UseUser';
 import useTitle from '../hooks/useTitle';
-import SocialLogin from '../pages/Shared/SocialLogin';
+import SocialLogin from './Shared/SocialLogin';
 
 const Login = () => {
 	useTitle('Login');
+	const { signIn } = useUser();
 
 	const location = useLocation();
+	const navigate = useNavigate();
 
 	const from = location?.state?.from?.pathname || '/';
 
@@ -20,13 +25,29 @@ const Login = () => {
 	} = useForm();
 	const onSubmit = data => {
 		console.log(data);
-
-		//TODO login
+		signIn(data.email, data.password)
+			.then(result => {
+				const loggedUser = result.user;
+				console.log('login: ', loggedUser, data.email, data.password);
+				Swal.fire({
+					position: 'top-end',
+					icon: 'success',
+					title: 'User Login Successful.',
+					showConfirmButton: false,
+					timer: 1500,
+				});
+				setErr('');
+				navigate(from, { replace: true });
+			})
+			.catch(error => {
+				setErr(error?.message);
+				console.log(error);
+			});
 	};
 
 	return (
-		<div className='hero my-20 '>
-			<div className='hero-content flex-col lg:flex-row gap-20'>
+		<div className='hero my-20'>
+			<div className='hero-content '>
 				<div className='card flex-shrink-0 w-full max-w-sm border-2 border-primary hover:border-secondary bg-base-100 py-5'>
 					<h1 className='text-3xl text-center font-medium'>Login</h1>
 					<form onSubmit={handleSubmit(onSubmit)} className='card-body -my-4'>

@@ -1,6 +1,66 @@
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import { useState } from 'react';
 import { TbCurrencyTaka } from 'react-icons/tb';
+import { useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import useUser from '../hooks/UseUser';
+import useTitle from '../hooks/useTitle';
 
 const HotelBook = () => {
+	useTitle('Booking');
+	const { id, checkIn, checkOut } = useParams();
+	const { user } = useUser();
+	const [selectedOption, setSelectedOption] = useState('twoBed');
+	const navigate = useNavigate();
+
+	const { data: hotel = {} } = useQuery({
+		queryKey: ['hotelBook', id],
+		queryFn: async () => {
+			const res = await axios.get(`/hotel-book/${id}`);
+			return res.data;
+		},
+	});
+
+	const handleOptionChange = event => {
+		setSelectedOption(event.target.value);
+	};
+
+	console.log(checkIn, checkOut);
+
+	const handleReserve = event => {
+		event.preventDefault();
+		const roomType =
+			selectedOption === 'twoBed'
+				? 'Two Bed Room'
+				: selectedOption === 'deluxe'
+				? 'Deluxe Room'
+				: 'Penthouse Apartment';
+
+		axios
+			.post(`http://localhost:5000/booking-collection`, {
+				email: user?.email,
+				room: roomType,
+				image: hotel.hotelImage,
+				name: hotel.hotelName,
+				checkIn,
+				checkOut,
+				price:
+					selectedOption === 'twoBed'
+						? hotel.twoBedPrice
+						: selectedOption === 'deluxe'
+						? hotel.deluxePrice
+						: hotel.penthousePrice,
+			})
+			.then(res => {
+				if (res.data.insertedId) {
+					Swal.fire({
+						title: `Successfully Reserved ${roomType}`,
+					});
+					navigate('/');
+				}
+			});
+	};
 	return (
 		<div className='container my-20'>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
@@ -27,17 +87,13 @@ const HotelBook = () => {
 			</div>
 			<div className='flex flex-col md:flex-row gap-10 my-10 '>
 				<div className='w-3/4'>
-					<h1 className='text-4xl font-semibold mb-5'>Hotel Name</h1>
-					<p className='text-justify '>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim,
-						aperiam voluptatibus accusamus dolorem hic dolore consequatur
-						voluptas, nisi velit culpa est tempora ex nam aspernatur quia esse
-						optio animi ad facilis. Quibusdam blanditiis, quis voluptatem,
-						quidem ipsam ut, illo rerum labore sunt perferendis laborum pariatur
-						nam quo expedita deleniti!
-					</p>
+					<h1 className='text-4xl font-semibold mb-5'>{hotel.hotelName}</h1>
+					<p className='text-justify '>{hotel.description}</p>
 				</div>
-				<form className='bg-base-100 rounded-lg px-6 py-2 w-1/4 border-2'>
+				<form
+					onSubmit={handleReserve}
+					className='bg-base-100 rounded-lg px-6 py-2 w-1/4 border-2'
+				>
 					<h1 className='text-lg font-semibold my-3 ml-1 text-center'>
 						Select Room
 					</h1>
@@ -47,14 +103,15 @@ const HotelBook = () => {
 								<span>Two Bed Room</span>
 								<span className='flex h-12 items-center'>
 									<TbCurrencyTaka className='inline text-xl' />
-									<span>5000</span>
+									<span>{hotel.twoBedPrice}</span>
 								</span>
 							</span>
 							<input
 								type='radio'
-								name='radio-10'
+								value='twoBed'
+								checked={selectedOption === 'twoBed'}
+								onChange={handleOptionChange}
 								className='radio checked:bg-First'
-								checked
 							/>
 						</label>
 					</div>
@@ -64,14 +121,15 @@ const HotelBook = () => {
 								<span>Deluxe Room</span>
 								<span className='flex h-12 items-center'>
 									<TbCurrencyTaka className='inline text-xl' />
-									<span>6000</span>
+									<span>{hotel.deluxePrice}</span>
 								</span>
 							</span>
 							<input
 								type='radio'
-								name='radio-10'
+								value='deluxe'
+								checked={selectedOption === 'deluxe'}
+								onChange={handleOptionChange}
 								className='radio checked:bg-First'
-								checked
 							/>
 						</label>
 					</div>
@@ -81,14 +139,15 @@ const HotelBook = () => {
 								<span>Penthouse Apartment</span>
 								<span className='flex h-12 items-center'>
 									<TbCurrencyTaka className='inline text-xl' />
-									<span>7000</span>
+									<span>{hotel.penthousePrice}</span>
 								</span>
 							</span>
 							<input
 								type='radio'
-								name='radio-10'
+								value='penthouse'
+								checked={selectedOption === 'penthouse'}
+								onChange={handleOptionChange}
 								className='radio checked:bg-First'
-								checked
 							/>
 						</label>
 					</div>
